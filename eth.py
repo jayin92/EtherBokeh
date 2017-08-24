@@ -17,25 +17,31 @@ def multi(List):
 	return results
 
 source = ColumnDataSource(dict(x=[], y=[], avg=[], longavg=[]))
+
 fig = Figure(x_axis_label = 'Time',
 			 y_axis_label = 'Mhash/s',
 			 x_axis_type = 'datetime',
 			 plot_width=1500,
 			 plot_height=800)
-# fig.xaxis.axis_lable = 'Time'
-# fig.yaxis.axis_lable = 'Mhash/s'
+
 fig.line(source=source, x='x', y='y',
 		 line_width=2, alpha=0.85, color='red', legend='current Hashrate')
+
 fig.line(source=source, x='x', y='avg',
 		 line_width=2, alpha=0.85, color='blue', legend='average Hashrate(3HR)')
+
 fig.line(source=source, x='x', y='longavg',
 		 line_width=2, alpha=0.85, color='green', legend='average Hashrate(24HR)')
 
 
 updateTime = 60
 
+##########################IMPORTANT##########################
+ethereum_address = 'YOUR ADDRESS'
+########YOU HAVE TO ENTER YOUR ETHEREUM ADDRESS ABOVE########
 
-api_url = 'https://www.tweth.tw/api/accounts/0x9b933392f33eca6ad38e312df615e6a3b0af977d'
+
+api_url = 'https://www.tweth.tw/api/accounts/' + ethereum_address
 ct = 0
 local = ''
 longHashrate = 0
