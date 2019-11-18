@@ -1,9 +1,9 @@
 # EtherBokeh
 
 ## introduce 
-I use python 3 and bokeh made this small scripts. 
+Use python 3 and bokeh in this small scripts. 
 
-**WARNING if you are not the miner of www.tweth.tw, you cant use this.**
+**WARNING if you are not a miner of www.tweth.tw, you can't use this tool.**
 
 ## HOW TO USE IT 
 1. download this repo
